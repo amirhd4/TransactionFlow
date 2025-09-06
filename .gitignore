@@ -2,6 +2,15 @@
 __pycache__/
 *.py[codz]
 *$py.class
+*.py[cod]
+*.pyo
+
+
+*/migrations/
+!*/migrations/__init__.py
+
+staticfiles
+.idea
 
 # C extensions
 *.so
@@ -127,6 +136,7 @@ ipython_config.py
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
+
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
@@ -135,7 +145,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env
 .envrc
 .venv
 env/

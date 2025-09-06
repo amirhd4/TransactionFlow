@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}New Transaction{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Create a New Transaction</h2>
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.source_account.label }}</label>
+                        {{ form.source_account }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.gateway_account.label }}</label>
+                        {{ form.gateway_account }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.amount.label }}</label>
+                        {{ form.amount }}
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Send Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
